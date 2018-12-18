@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "lib": ["esnext", "dom"],
+    "jsx": "react",
+    "jsxFactory": "h",
+    "outDir": "./dist",
+    "strict": true,
+    "baseUrl": "./"
+  },
+  "compileOnSave": true,
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
