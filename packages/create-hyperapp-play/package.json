@@ -1,0 +1,24 @@
+{
+  "name": "create-hyperapp-play",
+  "version": "0.0.0",
+  "description": "Setup Hyperapp Play in your porject",
+  "bin": "dist/index.js",
+  "repository": "git@github.com:babie/hyperapp-play.git",
+  "author": "babie",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "lynt": "^0.5.4",
+    "prettier": "^1.15.3",
+    "typescript": "^3.2.2"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "lynt": {
+    "typescript": true,
+    "react": true,
+    "ignore": ["tests/**/*.*", "fixtures/**/*.*"]
+  }
+}

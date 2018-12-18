@@ -1,2 +1,3 @@
-# hyperapp-play
-An environment to develop UI components for Hyperapp
+# Hyperapp Play
+
+Component viewer for Hyperapp
