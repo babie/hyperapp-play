@@ -2,7 +2,7 @@
   "name": "hyperapp-play",
   "version": "0.0.0",
   "description": "An environment to develop UI for Hyperapp",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "git@github.com:babie/hyperapp-play.git",
   "author": "babie",
   "license": "MIT",

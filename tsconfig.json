@@ -5,11 +5,11 @@
     "lib": ["esnext", "dom"],
     "jsx": "react",
     "jsxFactory": "h",
-    "outDir": "./dist",
+    "declaration": true,
+    "outDir": "dist",
     "strict": true,
     "baseUrl": "./"
   },
-  "compileOnSave": true,
   "include": ["src"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "dist"]
 }
