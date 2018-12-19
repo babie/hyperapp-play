@@ -38,7 +38,7 @@ cli
     console.log(
       [chalk.cyan('>'), chalk.blueBright('updating package.json')].join(' ')
     )
-    await updatePackageJson({ projectRoot })
+    await updatePackageJson({ projectRoot }).catch(handleError)
   })
 
 cli.help()
