@@ -4,6 +4,12 @@ import chalk from 'chalk'
 
 import { generateConfig } from './lib/config'
 
+const handleError = (err: Error) => {
+  console.error(chalk.red(`> Failed:`))
+  console.error(err.stack)
+  process.exit(1)
+}
+
 const cli = cac('create-hyperapp-play')
 cli
   .command('<project_root>', 'Integrate Hyperapp Play into your project')
@@ -12,7 +18,7 @@ cli
     // Generate config
     console.log(`${chalk.cyan('>')} generating play.config.js`)
     const dir = path.resolve(process.cwd(), project_root)
-    await generateConfig(dir)
+    await generateConfig(dir).catch(handleError)
 
     console.log(options)
   })
