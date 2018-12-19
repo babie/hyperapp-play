@@ -3,6 +3,7 @@ import * as cac from 'cac'
 import chalk from 'chalk'
 
 import { generateConfig } from './lib/config'
+import { generateTemplates } from './lib/template'
 
 const handleError = (err: Error) => {
   console.error(chalk.red(`> Failed:`))
@@ -12,15 +13,21 @@ const handleError = (err: Error) => {
 
 const cli = cac('create-hyperapp-play')
 cli
-  .command('<project_root>', 'Integrate Hyperapp Play into your project')
+  .command('<project-root>', 'Integrate Hyperapp Play into your project')
   .option('--typescript', 'Generate TypeScript templates')
-  .action(async (project_root, options) => {
+  .action(async (projectRoot: string, options: any) => {
+    const projectPath = path.resolve(projectRoot)
+    const language = options.typescript ? 'typescript' : 'javascript'
+    //console.log(projectPath)
+    //console.log(language)
+
     // Generate config
     console.log(`${chalk.cyan('>')} generating play.config.js`)
-    const dir = path.resolve(process.cwd(), project_root)
-    await generateConfig(dir).catch(handleError)
+    await generateConfig(projectPath).catch(handleError)
 
-    console.log(options)
+    // Generate templates
+    console.log(`${chalk.cyan('>')} generating play templates`)
+    await generateTemplates({ projectPath, language }).catch(handleError)
   })
 
 cli.help()
