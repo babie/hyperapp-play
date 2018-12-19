@@ -4,6 +4,7 @@ import chalk from 'chalk'
 
 import { generateConfig } from './lib/config'
 import { generateTemplates } from './lib/template'
+import { updatePackageJson } from './lib/package'
 
 const handleError = (err: Error) => {
   console.error(chalk.red(`> Failed:`))
@@ -21,13 +22,23 @@ cli
     //console.log(projectPath)
     //console.log(language)
 
+    // Generate templates
+    console.log(
+      [chalk.cyan('>'), chalk.blueBright('generating play templates')].join(' ')
+    )
+    await generateTemplates({ projectPath, language }).catch(handleError)
+
     // Generate config
-    console.log(`${chalk.cyan('>')} generating play.config.js`)
+    console.log(
+      [chalk.cyan('>'), chalk.blueBright('generating play.config.js')].join(' ')
+    )
     await generateConfig(projectPath).catch(handleError)
 
-    // Generate templates
-    console.log(`${chalk.cyan('>')} generating play templates`)
-    await generateTemplates({ projectPath, language }).catch(handleError)
+    // Update package.json
+    console.log(
+      [chalk.cyan('>'), chalk.blueBright('updating package.json')].join(' ')
+    )
+    await updatePackageJson({ projectRoot })
   })
 
 cli.help()
