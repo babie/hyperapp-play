@@ -7,9 +7,7 @@ interface Params {
 }
 
 export const generateTemplates = ({ projectPath, language }: Params) => {
-  const src = path.resolve(
-    path.join(__dirname, '..', '..', 'templates', language)
-  )
+  const src = path.resolve(__dirname, '..', '..', 'templates', language)
   const dest = path.resolve(projectPath, 'play')
   return fse.copy(src, dest)
 }
