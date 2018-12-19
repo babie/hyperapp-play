@@ -828,6 +828,11 @@ hosted-git-info@^2.1.4:
   resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.7.1.tgz#97f236977bd6e125408930ff6de3eec6281ec047"
   integrity sha512-7T/BxH19zbcCTa8XkMlbK5lTo1WtgkFi3GvdWEyNuc4Vex7/9Dqbnpsf4JMydcfj9HCg4zUWFTL3Za6lapg5/w==
 
+hyperapp@^1.2.9:
+  version "1.2.9"
+  resolved "https://registry.yarnpkg.com/hyperapp/-/hyperapp-1.2.9.tgz#a17ec09634968a5fa5f6b7d649e7a03d9680fcf2"
+  integrity sha512-bIzi12am7pyQ5nc2qnQpN6GWonjdJp+AghY7j9H9L0vccM1OQ3Cqn13cZlmS9KYm91Nf9fwF4KjvbQekFBxHVw==
+
 iconv-lite@^0.4.24:
   version "0.4.24"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.24.tgz#2022b4b25fbddc21d2f524974a474aafe733908b"

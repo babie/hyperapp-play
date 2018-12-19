@@ -2,11 +2,12 @@
   "name": "hyperapp-play",
   "version": "0.0.0",
   "description": "Component viewer for Hyperapp",
-  "main": "dist/lib.js",
+  "main": "dist/index.js",
   "repository": "git@github.com:babie/hyperapp-play.git",
   "author": "babie",
   "license": "MIT",
   "private": false,
+  "scripts": { "build": "tsc" },
   "devDependencies": {
     "lynt": "^0.5.4",
     "prettier": "^1.15.3",
@@ -20,5 +21,8 @@
     "typescript": true,
     "react": true,
     "ignore": ["tests/**/*.*", "fixtures/**/*.*"]
+  },
+  "dependencies": {
+    "hyperapp": "^1.2.9"
   }
 }

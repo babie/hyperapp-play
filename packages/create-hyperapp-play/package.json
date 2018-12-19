@@ -10,8 +10,16 @@
   "scripts": {
     "build": "tsc"
   },
+  "dependencies": {
+    "@types/fs-extra": "^5.0.4",
+    "cac": "^6.3.10",
+    "chalk": "^2.4.1",
+    "fs-extra": "^7.0.1",
+    "update-pkg": "^1.2.0"
+  },
   "devDependencies": {
     "@types/node": "^10.12.17",
+    "hyperapp-play": "^0.0.0",
     "lynt": "^0.5.4",
     "prettier": "^1.15.3",
     "typescript": "^3.2.2"
@@ -23,16 +31,6 @@
   "lynt": {
     "typescript": true,
     "react": true,
-    "ignore": [
-      "tests/**/*.*",
-      "fixtures/**/*.*"
-    ]
-  },
-  "dependencies": {
-    "@types/fs-extra": "^5.0.4",
-    "cac": "^6.3.10",
-    "chalk": "^2.4.1",
-    "fs-extra": "^7.0.1",
-    "update-pkg": "^1.2.0"
+    "ignore": ["tests/**/*.*", "fixtures/**/*.*"]
   }
 }
