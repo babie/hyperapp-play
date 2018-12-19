@@ -1,3 +1,6 @@
+import * as fs from 'fs'
+import * as path from 'path'
+
 const config = `
 module.exports = {
   entry: {
@@ -12,3 +15,14 @@ module.exports = {
   }
 }
 `
+
+export const generateConfig = (dir: string) => {
+  return new Promise((resolve, reject) => {
+    fs.writeFile(path.resolve(dir, 'play.config.js'), config, 'utf8', err => {
+      if (err) {
+        return reject(err)
+      }
+      resolve()
+    })
+  })
+}
