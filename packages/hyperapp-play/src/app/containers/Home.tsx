@@ -1,5 +1,4 @@
-import { h, View } from 'hyperapp'
-import { State, Actions } from '../modules'
+import { h } from 'hyperapp'
 
 export const Home: any = (_props: any, _children: any) => (
   _state: any,
