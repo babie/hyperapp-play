@@ -1,4 +1,5 @@
 import { h } from 'hyperapp'
+import { Main, Sidebar } from './organs'
 
 export const Home: any = (_props: any, _children: any) => (
   _state: any,
@@ -6,8 +7,8 @@ export const Home: any = (_props: any, _children: any) => (
 ) => {
   return (
     <div>
-      <div key="main">Main</div>
-      <div key="sidebar">Sidebar</div>
+      <Main />
+      <Sidebar />
     </div>
   )
 }
