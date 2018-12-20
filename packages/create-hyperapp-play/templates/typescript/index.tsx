@@ -1,5 +1,5 @@
 import { h } from 'hyperapp'
-import { play, getScenario } from 'hyperapp-play'
+import { play } from 'hyperapp-play'
 
 const MyButton = (_props, children) => <button>{children}</button>
 
@@ -8,5 +8,3 @@ const MyButton = (_props, children) => <button>{children}</button>
 play('MyButton')
   .add('with text', () => <MyButton>Hello, world!</MyButton>)
   .add('with emoji', () => <MyButton>✌️😆✌️</MyButton>)
-
-console.dir(getScenario())
