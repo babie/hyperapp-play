@@ -3,15 +3,17 @@ import * as path from 'path'
 
 const config = `
 module.exports = {
-  entry: {
-    app: 'play/app.js'
-  },
+  entry: 'play/app.js',
   output: {
     dir: '.play'
   },
+  babel: {
+    jsx: 'h'
+  },
   devServer: {
     port: 5000,
-    hotOnly: true
+    hotOnly: true,
+    open: true
   }
 }
 `

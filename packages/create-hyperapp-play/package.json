@@ -2,7 +2,9 @@
   "name": "create-hyperapp-play",
   "version": "0.0.0",
   "description": "Setup Hyperapp Play in your porject",
-  "bin": "dist/index.js",
+  "bin": {
+    "create-hyperapp-play": "dist/index.js"
+  },
   "repository": "git@github.com:babie/hyperapp-play.git",
   "author": "babie",
   "license": "MIT",
@@ -22,7 +24,8 @@
     "hyperapp-play": "^0.0.0",
     "lynt": "^0.5.4",
     "prettier": "^1.15.3",
-    "typescript": "^3.2.2"
+    "typescript": "^3.2.2",
+    "poi": "^12.2.1"
   },
   "prettier": {
     "semi": false,
