@@ -3,7 +3,9 @@ import { VNode, View, Component } from 'hyperapp'
 type Element = VNode | View<any, any> | Component
 type Shot = Map<string, Element>
 type Scenario = Map<string, Shot>
+
 const scenario: Scenario = new Map()
+
 class Play {
   actor: string
 
@@ -11,9 +13,9 @@ class Play {
     this.actor = actor
   }
 
-  add(direction: string, acting: Element) {
+  add(direction: string, perform: Element) {
     const shot: Shot = new Map()
-    shot.set(direction, acting)
+    shot.set(direction, perform)
     scenario.set(this.actor, shot)
     return this
   }
