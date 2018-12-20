@@ -7,7 +7,10 @@
   "author": "babie",
   "license": "MIT",
   "private": false,
-  "scripts": { "build": "tsc" },
+  "scripts": { "watch": "tsc --watch", "build": "tsc" },
+  "dependencies": {
+    "hyperapp": "^1.2.9"
+  },
   "devDependencies": {
     "lynt": "^0.5.4",
     "prettier": "^1.15.3",
@@ -21,8 +24,5 @@
     "typescript": true,
     "react": true,
     "ignore": ["tests/**/*.*", "fixtures/**/*.*"]
-  },
-  "dependencies": {
-    "hyperapp": "^1.2.9"
   }
 }
