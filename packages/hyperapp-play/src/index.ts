@@ -5,6 +5,7 @@ import { App } from './app'
 const app = () => {
   const scenario = getScenario()
   console.dir(scenario)
+  App.state.scenario = scenario
   _app(App.state, App.actions, App.view, document.getElementById('app'))
 }
 

@@ -1,8 +1,14 @@
-import { h } from 'hyperapp'
+import { h, View } from 'hyperapp'
+import { State, Actions } from '../modules'
 
-export const Home = (
-  <div>
-    <div key="main">Main</div>
-    <div key="sidebar">Sidebar</div>
-  </div>
-)
+export const Home: any = (_props: any, _children: any) => (
+  _state: any,
+  _actions: any
+) => {
+  return (
+    <div>
+      <div key="main">Main</div>
+      <div key="sidebar">Sidebar</div>
+    </div>
+  )
+}

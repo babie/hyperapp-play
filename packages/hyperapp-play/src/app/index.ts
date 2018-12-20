@@ -1,8 +1,8 @@
 import { View } from 'hyperapp'
 import { Home } from './containers'
-import { state, actions } from './modules'
+import { state, actions, State, Actions } from './modules'
 
-const view: View<any, any> = () => Home
+const view: View<State, Actions> = () => Home
 
 export const App = {
   state,
