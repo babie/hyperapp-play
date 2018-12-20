@@ -2,7 +2,6 @@ import * as path from 'path'
 import * as cac from 'cac'
 import chalk from 'chalk'
 
-import { generateConfig } from './lib/config'
 import { generateTemplates } from './lib/template'
 import { updatePackageJson } from './lib/package'
 
@@ -27,12 +26,6 @@ cli
       [chalk.cyan('>'), chalk.blueBright('generating play templates')].join(' ')
     )
     await generateTemplates({ projectPath, language }).catch(handleError)
-
-    // Generate config
-    console.log(
-      [chalk.cyan('>'), chalk.blueBright('generating play.config.js')].join(' ')
-    )
-    await generateConfig(projectPath).catch(handleError)
 
     // Update package.json
     console.log(
