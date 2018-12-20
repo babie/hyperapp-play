@@ -3,17 +3,17 @@ import { Shot, Scenario, Perform } from './utils'
 const scenario: Scenario = new Map()
 
 class Play {
-  actor: string
+  cast: string
 
-  constructor(actor: string) {
-    this.actor = actor
+  constructor(cast: string) {
+    this.cast = cast
   }
 
   add(direction: string, perform: Perform) {
     const shot: Shot = new Map()
     shot.set(direction, perform)
-    const shots: Shot[] = scenario.get(this.actor) || []
-    scenario.set(this.actor, [...shots, shot])
+    const shots: Shot[] = scenario.get(this.cast) || []
+    scenario.set(this.cast, [...shots, shot])
     return this
   }
 }
