@@ -1,6 +1,6 @@
-import { Scenes, Scenario, Perform } from './utils'
+import { Scenes, Scripts, Perform } from './utils'
 
-const scenario: Scenario = new Map()
+const scripts: Scripts = new Map()
 
 class Play {
   cast: string
@@ -10,9 +10,9 @@ class Play {
   }
 
   add(direction: string, perform: Perform) {
-    const scenes: Scenes = scenario.get(this.cast) || new Map()
+    const scenes: Scenes = scripts.get(this.cast) || new Map()
     scenes.set(direction, perform)
-    scenario.set(this.cast, scenes)
+    scripts.set(this.cast, scenes)
     return this
   }
 }
@@ -21,6 +21,6 @@ const play = (cast: string) => {
   return new Play(cast)
 }
 
-const getScenario = () => scenario
+const getScripts = () => scripts
 
-export { play, getScenario }
+export { play, getScripts }

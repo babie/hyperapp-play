@@ -6,7 +6,7 @@ export const Main: any = (_props: any, _children: any) => (
   _actions: any
 ) => {
   if (state.lead) {
-    const scenes = state.scenario.get(state.lead.cast)
+    const scenes = state.scripts.get(state.lead.cast)
     if (scenes) {
       const perform = scenes.get(state.lead.direction)
       if (perform) {

@@ -6,4 +6,4 @@ export interface Lead {
 }
 export type Perform = () => VNode | View<any, any> | Component
 export type Scenes = Map<string, Perform>
-export type Scenario = Map<string, Scenes>
+export type Scripts = Map<string, Scenes>

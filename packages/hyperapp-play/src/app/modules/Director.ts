@@ -1,12 +1,12 @@
-import { Scenario, Lead } from '../../utils'
+import { Scripts, Lead } from '../../utils'
 
 export namespace Director {
   export interface State {
-    scenario: Scenario
+    scripts: Scripts
     lead: Lead | null
   }
   export const state: State = {
-    scenario: new Map(),
+    scripts: new Map(),
     lead: null
   }
 
@@ -15,7 +15,7 @@ export namespace Director {
   }
   export const actions: Actions = {
     act: (lead: Lead) => (state: State) => ({
-      scenario: state.scenario,
+      scripts: state.scripts,
       lead
     })
   }
