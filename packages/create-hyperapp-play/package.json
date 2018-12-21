@@ -25,9 +25,9 @@
     "@types/node": "^10.12.17",
     "hyperapp-play": "^0.0.0",
     "lynt": "^0.5.4",
+    "poi": "^12.2.3",
     "prettier": "^1.15.3",
-    "typescript": "^3.2.2",
-    "poi": "^12.2.1"
+    "typescript": "^3.2.2"
   },
   "prettier": {
     "semi": false,
@@ -36,9 +36,6 @@
   "lynt": {
     "typescript": true,
     "react": true,
-    "ignore": [
-      "tests/**/*.*",
-      "fixtures/**/*.*"
-    ]
+    "ignore": ["tests/**/*.*", "fixtures/**/*.*"]
   }
 }

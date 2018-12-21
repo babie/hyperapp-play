@@ -8,6 +8,7 @@ module.exports = {
   },
   devServer: {
     port: 5000,
-    hotOnly: true
+    hotOnly: true,
+    open: true
   }
 }
