@@ -7,10 +7,10 @@ export const Direction: any = (props: Lead, _children: any) => (
   actions: Actions
 ) => {
   const lead = { cast: props.cast, direction: props.direction }
-  const act = () => actions.act(lead)
+  const shoot = () => actions.shoot(lead)
   return (
     <li>
-      <a onclick={act}>{props.direction}</a>
+      <a onclick={shoot}>{props.direction}</a>
     </li>
   )
 }

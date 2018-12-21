@@ -11,10 +11,10 @@ export namespace Director {
   }
 
   export interface Actions {
-    act: (lead: Lead) => (state: State) => State
+    shoot: (lead: Lead) => (state: State) => State
   }
   export const actions: Actions = {
-    act: (lead: Lead) => (state: State) => ({
+    shoot: (lead: Lead) => (state: State) => ({
       scripts: state.scripts,
       lead
     })
