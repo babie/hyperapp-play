@@ -1,4 +1,4 @@
-import { Scenes, Scripts, Perform } from './utils'
+import { Scenes, Scripts, Perform } from './app/modules'
 
 const scripts: Scripts = new Map()
 

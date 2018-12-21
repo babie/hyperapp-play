@@ -1,6 +1,5 @@
 import { h } from 'hyperapp'
-import { Actions, State } from '../../modules'
-import { Setup } from 'src/utils'
+import { Actions, State, Setup } from '../../modules'
 
 export const Direction: any = (props: Setup, _children: any) => (
   _state: State,

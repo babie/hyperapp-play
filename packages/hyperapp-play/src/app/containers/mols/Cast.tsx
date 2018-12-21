@@ -1,7 +1,6 @@
 import { h } from 'hyperapp'
 
-import { Scenes } from '../../../utils'
-import { Actions, State } from '../../modules'
+import { Actions, State, Scenes } from '../../modules'
 import { Direction } from './Direction'
 
 interface CastProps {

@@ -1,4 +1,4 @@
-import { Scripts, Setup } from '../../utils'
+import { Scripts, Setup } from './utils'
 
 export namespace Director {
   export interface State {
