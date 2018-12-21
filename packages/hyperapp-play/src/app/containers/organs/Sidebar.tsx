@@ -8,8 +8,8 @@ export const Sidebar: any = (_props: any, _children: any) => (
 ) => {
   const casts: any[] = []
   state.scenario.forEach((shots, cast) => {
-    casts.push(<Cast key={cast} name={cast} shots={shots} />)
+    casts.push(<Cast key={cast} cast={cast} shots={shots} />)
   })
 
-  return <div key="sidebar">{casts}</div>
+  return <nav>{casts}</nav>
 }

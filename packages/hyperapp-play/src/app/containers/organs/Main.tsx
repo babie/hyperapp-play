@@ -1,8 +1,19 @@
 import { h } from 'hyperapp'
+import { State } from 'src/app/modules'
 
 export const Main: any = (_props: any, _children: any) => (
-  _state: any,
+  state: State,
   _actions: any
 ) => {
-  return <div key="main">Main</div>
+  if (state.lead) {
+    const shots = state.scenario.get(state.lead.cast)
+    if (shots) {
+      const perform = shots.get(state.lead.direction)
+      if (perform) {
+        return <main>{perform()}</main>
+      }
+    }
+  }
+
+  return <main />
 }
