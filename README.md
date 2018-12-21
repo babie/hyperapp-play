@@ -1,3 +1,3 @@
 # Hyperapp Play
 
-Component viewer for Hyperapp
+🎭 A component viewer for Hyperapp
