@@ -7,8 +7,8 @@ export const Navigation: any = (_props: any, _children: any) => (
   _actions: any
 ) => {
   const casts: any[] = []
-  state.scenario.forEach((shots, cast) => {
-    casts.push(<Cast key={cast} cast={cast} shots={shots} />)
+  state.scenario.forEach((scenes, cast) => {
+    casts.push(<Cast key={cast} cast={cast} scenes={scenes} />)
   })
 
   return <nav>{casts}</nav>
