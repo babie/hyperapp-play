@@ -1,5 +1,5 @@
 import { Director } from './Director'
-export { Setup, Perform, Scenes, Scripts } from './utils'
+export { Setup, Perform, Scenes, Scripts } from './types'
 export type State = Director.State
 export type Actions = Director.Actions
 export const state: State = Director.state
