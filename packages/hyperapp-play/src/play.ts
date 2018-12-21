@@ -1,4 +1,4 @@
-import { Shot, Scenario, Perform } from './utils'
+import { Shots, Scenario, Perform } from './utils'
 
 const scenario: Scenario = new Map()
 
@@ -10,10 +10,9 @@ class Play {
   }
 
   add(direction: string, perform: Perform) {
-    const shot: Shot = new Map()
-    shot.set(direction, perform)
-    const shots: Shot[] = scenario.get(this.cast) || []
-    scenario.set(this.cast, [...shots, shot])
+    const shots: Shots = scenario.get(this.cast) || new Map()
+    shots.set(direction, perform)
+    scenario.set(this.cast, shots)
     return this
   }
 }

@@ -1,20 +1,17 @@
 import { h } from 'hyperapp'
-import { Shot, Perform } from '../../../utils'
+import { Shots, Perform } from '../../../utils'
 
 interface CastProps {
   name: string
-  shots: Shot[]
+  shots: Shots
 }
 export const Cast: any = (props: CastProps, _children: any) => (
   _state: any,
   _actions: any
 ) => {
   const directions: any[] = []
-  props.shots.map(shot => {
-    shot.forEach((perform: Perform, direction: string) => {
-      directions.push(<li key={props.name + direction}>{direction}</li>)
-    })
-    return directions
+  props.shots.forEach((_perform: Perform, direction: string) => {
+    directions.push(<li key={props.name + direction}>{direction}</li>)
   })
 
   return (
