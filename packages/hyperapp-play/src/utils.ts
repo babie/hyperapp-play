@@ -1,6 +1,6 @@
 import { VNode, View, Component } from 'hyperapp'
 
-export interface Lead {
+export interface Setup {
   cast: string
   direction: string
 }

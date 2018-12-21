@@ -5,10 +5,10 @@ export const Main: any = (_props: any, _children: any) => (
   state: State,
   _actions: any
 ) => {
-  if (state.lead) {
-    const scenes = state.scripts.get(state.lead.cast)
+  if (state.setup) {
+    const scenes = state.scripts.get(state.setup.cast)
     if (scenes) {
-      const perform = scenes.get(state.lead.direction)
+      const perform = scenes.get(state.setup.direction)
       if (perform) {
         return <main>{perform()}</main>
       }
