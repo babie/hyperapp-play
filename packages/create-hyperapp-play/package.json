@@ -11,7 +11,8 @@
   "private": false,
   "scripts": {
     "watch": "tsc --watch",
-    "build": "tsc"
+    "build": "tsc",
+    "play": "poi --serve --config play/config.js"
   },
   "dependencies": {
     "@types/fs-extra": "^5.0.4",
@@ -35,6 +36,9 @@
   "lynt": {
     "typescript": true,
     "react": true,
-    "ignore": ["tests/**/*.*", "fixtures/**/*.*"]
+    "ignore": [
+      "tests/**/*.*",
+      "fixtures/**/*.*"
+    ]
   }
 }
