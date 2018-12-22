@@ -1,4 +1,4 @@
-# Hyperapp Play (yet in development)
+# Hyperapp Play (in development yet)
 
 A component viewer for Hyperapp
 
@@ -45,7 +45,7 @@ import { MyButton } from 'path/to/your/hyperapp/components'
 //// const MyButton = (_props, children) => <button>{children}</button>
 
 // Use `play` to describe component title
-// Use `.add` to add script for that component
+// Use `.add` to add scene for that component
 play('MyButton')
   .add('with text', () => <MyButton>Hello, world!</MyButton>)
   .add('with emoji', () => <MyButton>✌️😆✌️</MyButton>)
