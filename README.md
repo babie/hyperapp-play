@@ -4,6 +4,8 @@ A component viewer for Hyperapp
 
 ## Installing
 
+Run `create-hyperapp-play` in your project directory
+
 npm:
 
 ```sh
@@ -18,9 +20,16 @@ $ yarn create hyperapp-play .
 $ yarn add hyperapp @hyperapp/logger # if not installed
 ```
 
-### TypeScript
+### Params and Options
 
-Add `--typescript` option to `create-hyperapp-play` command.
+```
+Usage:
+  $ create-hyperapp-play <project-root>
+
+Options:
+  --typescript  Generate TypeScript templates
+  -h, --help    Display help message
+```
 
 ## Usage
 
