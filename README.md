@@ -1,10 +1,8 @@
-# Hyperapp Play (in development yet)
+# 🎬 Hyperapp Play (in development yet)
 
 A component viewer for Hyperapp
 
-## Installing
-
-Run `create-hyperapp-play` in your project directory
+## 🛹 Installing
 
 npm:
 
@@ -20,18 +18,24 @@ $ yarn create hyperapp-play .
 $ yarn add hyperapp @hyperapp/logger # if not installed
 ```
 
-### Params and Options
+### `create-hyperapp-play`
 
-```
-Usage:
-  $ create-hyperapp-play <project-root>
+command:
 
-Options:
-  --typescript  Generate TypeScript templates
-  -h, --help    Display help message
+```sh
+$ create-hyperapp-play <project-root>
 ```
 
-## Usage
+- generate a `play` directory which includes play templates
+- add a `play` script to `scripts` in your `package.json`
+- run `npm install` or `yarn install`
+
+options:
+
+- `--typescript`: Generate TypeScript templates
+- `-h, --help` : Display help message
+
+## 🎸 Usage
 
 Edit `play/index.js` or `play/index.tsx`.
 
