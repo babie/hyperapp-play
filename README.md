@@ -1,4 +1,4 @@
-# Hyperapp Play
+# Hyperapp Play (yet in development)
 
 A component viewer for Hyperapp
 
