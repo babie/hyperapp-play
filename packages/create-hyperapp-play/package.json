@@ -25,12 +25,14 @@
     "@hyperapp/logger": "^0.5.0",
     "@types/fs-extra": "^5.0.4",
     "@types/node": "^10.12.17",
+    "@types/webpack-env": "^1.13.6",
     "hyperapp": "^1.2.9",
     "lynt": "^0.5.4",
     "prettier": "^1.15.3",
     "typescript": "^3.2.2",
     "hyperapp-play": "^0.0.0",
-    "poi": "^12.2.3"
+    "poi": "^12.2.3",
+    "@poi/plugin-typescript": "^12.0.0"
   },
   "prettier": {
     "semi": false,

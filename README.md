@@ -4,18 +4,40 @@ A component viewer for Hyperapp
 
 ## 🛹 Installing
 
+### JavaScript
+
 npm:
 
 ```sh
-$ npx create-hyperapp-play .
-$ npm i hyperapp @hyperapp/logger # if not installed
+$ npx create-hyperapp-play path/to/project
+$ npm install hyperapp --save # if not installed
+$ npm install @hyperapp/logger --saveDev # if not installed
 ```
 
 yarn:
 
 ```sh
-$ yarn create hyperapp-play .
-$ yarn add hyperapp @hyperapp/logger # if not installed
+$ yarn create hyperapp-play path/to/project
+$ yarn add hyperapp # if not installed
+$ yarn add @hyperapp/logger --dev # if not installed
+```
+
+### TypeScript:
+
+npm:
+
+```sh
+$ npx create-hyperapp-play path/to/project --typescript
+$ npm install hyperapp --save # if not installed
+$ npm install @hyperapp/logger @types/webpack-env --saveDev # if not installed
+```
+
+yarn:
+
+```sh
+$ yarn create hyperapp-play path/to/project --typescript
+$ yarn add hyperapp # if not installed
+$ yarn add @hyperapp/logger @types/webpack-env --dev # if not installed
 ```
 
 ### `create-hyperapp-play`
@@ -23,7 +45,7 @@ $ yarn add hyperapp @hyperapp/logger # if not installed
 command:
 
 ```sh
-$ create-hyperapp-play <project-root>
+$ create-hyperapp-play <project-root> [options]
 ```
 
 - generate a `play` directory which includes play templates
@@ -37,11 +59,11 @@ options:
 
 ## 🎸 Usage
 
-Edit `play/index.js` or `play/index.tsx`.
+### Write
 
-like this:
+Write `play/*.play.js` or `play/*.play.tsx` like this:
 
-```js
+```jsx
 import { h } from 'hyperapp'
 import { play } from 'hyperapp-play'
 
@@ -55,7 +77,9 @@ play('MyButton')
   .add('with emoji', () => <MyButton>✌️😆✌️</MyButton>)
 ```
 
-Run your play-scripts, then it will open browser(default: `http://localhost:5000`).
+### Run
+
+Run `play` npm/yarn script on project root directory, then it will open your browser(default: `http://localhost:5000`).
 
 npm:
 
@@ -67,4 +91,24 @@ yarn:
 
 ```sh
 $ yarn play
+```
+
+## 🎮 Config
+
+`play/config.js` is a [poi](https://poi.js.org/)'s config file for play server. Please feel free to edit it.
+
+```js
+module.exports = {
+  entry: 'play/app.js',
+  output: {
+    dir: '.play'
+  },
+  babel: {
+    jsx: 'h'
+  },
+  devServer: {
+    port: 5000,
+    open: true
+  }
+}
 ```

@@ -1,14 +1,16 @@
 module.exports = {
-  entry: 'play/app.ts',
+  entry: 'play/app.tsx',
   output: {
     dir: '.play'
   },
-  babel: {
-    jsx: 'h'
-  },
+  plugins: [
+    {
+      resolve: '@poi/plugin-typescript',
+      options: {}
+    }
+  ],
   devServer: {
     port: 5000,
-    hotOnly: true,
     open: true
   }
 }

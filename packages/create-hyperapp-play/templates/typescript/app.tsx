@@ -5,6 +5,6 @@ import { app } from 'hyperapp-play'
 const load = requireContext => {
   return requireContext.keys().map(requireContext)
 }
-load(require.context('./', true, /.play.jsx?$/))
+load(require.context('./', true, /.play.tsx?$/))
 
 app()
