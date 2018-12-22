@@ -4,6 +4,7 @@ import chalk from 'chalk'
 
 import { generateTemplates } from './lib/template'
 import { updatePackageJson } from './lib/package'
+import { installPackages } from './lib/install'
 
 const handleError = (err: Error) => {
   console.error(chalk.red(`> Failed:`))
@@ -23,15 +24,21 @@ cli
 
     // Generate templates
     console.log(
-      [chalk.cyan('>'), chalk.blueBright('generating play templates')].join(' ')
+      [chalk.cyan('>'), chalk.blueBright('Generating play templates')].join(' ')
     )
     await generateTemplates({ projectPath, language }).catch(handleError)
 
     // Update package.json
     console.log(
-      [chalk.cyan('>'), chalk.blueBright('updating package.json')].join(' ')
+      [chalk.cyan('>'), chalk.blueBright('Updating package.json')].join(' ')
     )
     await updatePackageJson({ projectPath }).catch(handleError)
+
+    // Install npm/yarn packages
+    console.log(
+      [chalk.cyan('>'), chalk.blueBright('Installing packages')].join(' ')
+    )
+    await installPackages({ projectPath }).catch(handleError)
   })
 
 cli.help()

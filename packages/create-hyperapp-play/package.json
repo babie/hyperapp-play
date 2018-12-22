@@ -18,17 +18,19 @@
     "cac": "^6.3.10",
     "chalk": "^2.4.1",
     "fs-extra": "^7.0.1",
+    "install-packages": "^0.2.5",
     "update-pkg": "^1.2.0"
   },
   "devDependencies": {
+    "@hyperapp/logger": "^0.5.0",
     "@types/fs-extra": "^5.0.4",
     "@types/node": "^10.12.17",
     "hyperapp": "^1.2.9",
-    "hyperapp-play": "^0.0.0",
     "lynt": "^0.5.4",
-    "poi": "^12.2.3",
     "prettier": "^1.15.3",
-    "typescript": "^3.2.2"
+    "typescript": "^3.2.2",
+    "hyperapp-play": "^0.0.0",
+    "poi": "^12.2.3"
   },
   "prettier": {
     "semi": false,
@@ -37,6 +39,9 @@
   "lynt": {
     "typescript": true,
     "react": true,
-    "ignore": ["tests/**/*.*", "fixtures/**/*.*"]
+    "ignore": [
+      "tests/**/*.*",
+      "fixtures/**/*.*"
+    ]
   }
 }
