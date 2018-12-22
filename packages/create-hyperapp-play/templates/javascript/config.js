@@ -1,5 +1,7 @@
+const path = require('path')
+
 module.exports = {
-  entry: 'play/app.js',
+  entry: path.join(__dirname, 'app.js'),
   output: {
     dir: '.play'
   },
