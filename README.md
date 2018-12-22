@@ -1,8 +1,8 @@
-# 🎬 Hyperapp Play (in development yet)
+# 🎬 Hyperapp Play (in development yet)
 
 A component viewer for Hyperapp
 
-## 🛹 Installing
+## 🛹 Installing
 
 npm:
 
