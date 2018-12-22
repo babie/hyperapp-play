@@ -42,7 +42,7 @@ play('MyButton')
   .add('with emoji', () => <MyButton>✌️😆✌️</MyButton>)
 ```
 
-Run your play-scripts, then it open browser(default: `http://localhost:5000`).
+Run your play-scripts, then it will open browser(default: `http://localhost:5000`).
 
 npm:
 
