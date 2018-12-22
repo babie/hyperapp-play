@@ -20,7 +20,7 @@ $ yarn add hyperapp @hyperapp/logger # if not installed
 
 ### TypeScript
 
-Add `--typescript` option.
+Add `--typescript` option to `create-hyperapp-play` command.
 
 ## Usage
 
